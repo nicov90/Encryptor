@@ -1,12 +1,16 @@
-const inputText=document.querySelector(".text-input");
-const message=document.querySelector(".results-message");
-const copyButton=document.querySelector(".copy-to-clipboard");
+const inputText = document.querySelector(".text-input");
+const message = document.querySelector(".results-message");
+const copyButton = document.querySelector(".copy-to-clipboard");
+const placeholderImg = document.querySelector(".img-results");
+const placeholderTxt = document.querySelector(".tip-txt");
 
 function EncryptMain(){
     const EncryptedText=toEncrypt(inputText.value);
     message.value=EncryptedText;
     message.style.display="block";
     copyButton.style.display="block";
+    placeholderImg.style.display="none";
+    placeholderTxt.style.display="none";
     inputText.value="";
 }
 function toEncrypt(TextValue){
@@ -25,6 +29,8 @@ function DecryptMain(){
     message.value=DecryptedText;
     message.style.display="block";
     copyButton.style.display="block";
+    placeholderImg.style.display="none";
+    placeholderTxt.style.display="none";
     inputText.value="";
 }
 function toDecrypt(TextValue){

@@ -1,5 +1,5 @@
 html,body{
-    background: #fcd2fc;
+    background: #fdeffd;
     height: 100%;
 }
 body, footer{
@@ -19,10 +19,6 @@ header{
     position: absolute;
     margin: 51px 66.66px;
 }
-/*.logo, .main-content, .text-body, .warning, .buttons, .results{
-    border: 2px #0A3871 solid;
-    box-sizing: border-box;
-}*/
 .main-content{
     width: 1200px;
     /*overflow: auto;*/
@@ -64,6 +60,7 @@ header{
     position: absolute;
     width: 80%;
     left: 30px;
+    bottom: 30px;
     padding: 25px 0;
     font-size: 16px;
     text-align: center;
@@ -183,4 +180,139 @@ footer{
 }
 #copyright{
     font-weight: 500;
+}
+@media screen and (max-width: 1200px){
+    .main-content, .logo{
+        width: 1024px;
+    }
+    .buttons button{
+        width: 270px;
+    }
+}
+@media screen and (max-width: 1024px){
+    .main-content, .logo{
+        width: 860px;
+    }
+    .buttons{
+        margin-left: 35px;
+        justify-content: space-evenly;
+    }
+    .buttons button{
+        width: 220px;
+    }
+}
+@media screen and (max-width: 860px){
+    .main-content, .logo{
+        width: 768px;
+        display: flex;
+        flex-direction: column;
+    }
+    .buttons{
+        margin-left: 0;
+    }
+    .buttons button{
+        width: 300px;
+        font-weight: 700;
+    }
+    .results{
+        display: flex;
+        flex-direction: row;
+        margin: 50px 50px;
+    }
+    .img-results{
+        padding: 20px;
+        width: 40%;
+    }
+    .results-message, .copy-to-clipboard{
+        position: unset;
+    }
+    .results-message{
+        box-sizing: border-box;
+        padding-top: 15px;
+        margin: 30px 0;
+        height: 150px;
+        width: 100%;
+    }
+    .copy-to-clipboard{
+        width: 100%;
+        margin: 15px 0;
+    }
+    footer{
+        padding: 0 0 30px;
+        height: auto;
+        display: block;
+    }
+    .copyright p{
+        padding-bottom: 200px;
+    }
+}
+@media screen and (max-width: 768px){
+    .main-content, .logo{
+        width: 90vw;
+    }
+    .logo{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .logo img{
+        position: unset;
+        width: 40px;
+    }
+    .buttons{
+        align-items: center;
+        flex-direction: column;
+    }
+    .buttons button{
+        font-size: 1.3em;
+        width: 75vw;
+    }
+    .img-results{
+        display: none;
+    }
+    .tip-txt{
+        padding: 20px;
+    }
+    .encrypt{
+        margin-bottom: 10px;
+    }
+    .results{
+        margin: 40px 40px;
+    }
+    .copy-to-clipboard{
+        width: 300px;
+        margin: 30px auto;
+    }
+}
+@media screen and (max-width: 480px){
+    .text-input{
+        padding: 50px 40px;
+        height: 450px;
+    }
+    .warning{
+        text-align: center;
+    }
+    .warning #icon{
+        margin-left: 0;
+    }
+    .warning p{
+        font-size: 0.9em;
+    }
+    .results-message, .copy-to-clipboard{
+        width: 60vw;
+    }
+    .results-message{
+        margin: 30px auto;
+    }
+}
+@media screen and (max-width: 320px){
+    .main-content, .logo{
+        width: 270px;
+    }
+    .warning #icon{
+        display: none;
+    }
+    .buttons button{
+        font-size: 1.2em;
+    }
 }
