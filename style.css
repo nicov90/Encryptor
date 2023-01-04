@@ -1,6 +1,8 @@
+*{
+    box-sizing: border-box;
+}
 html,body{
     background: #fdeffd;
-    height: 100%;
 }
 body, footer{
     width: 100%;
@@ -8,6 +10,22 @@ body, footer{
 }
 header{
     height: 150px;
+}
+footer{
+    padding: 30px 0;
+    text-align: center;
+    /*height: calc(100vh - 784px);*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.all{
+    height: 100vh;
+    min-height: 820px;
+    max-height: 1100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 .logo{
     margin: 0 auto;
@@ -168,15 +186,6 @@ header{
 }
 .decrypt:hover{
     background:#fddcee;
-}
-footer{
-    padding: 30px 0;
-    text-align: center;
-    height: calc(100vh - 784px);
-    box-sizing: border-box;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 #copyright{
     font-weight: 500;
